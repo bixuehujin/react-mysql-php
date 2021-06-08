@@ -283,6 +283,7 @@ packet:
             $command = $this->currCommand;
             $this->currCommand = null;
 
+            $error->setCommand($command);
             $command->emit('error', array($error));
         }
     }
